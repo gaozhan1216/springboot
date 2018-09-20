@@ -1,0 +1,125 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>少数派</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+    <style>
+        p{
+            display: inline;
+        }
+        .pic img{
+            height: 100px;
+            width: 200px;
+        }
+        .down{
+            margin-top: 20px;
+        }
+        .title{
+            font-size: 25px;;
+        }
+        .content{
+            padding-top: 17px;
+        }
+        .container{
+            width: 800px;
+        }
+        .mpic img{
+            height: 150px;;
+            width: 270px;;
+        }
+        .nav{
+            background-color: #292525;
+            width: auto;
+            height: 60px;
+        }
+        .font{
+            margin-top: 7px;
+            font-size: 20px;
+            margin-left: 250px;
+        }
+        .xin{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .n{
+            margin-left: 350px;
+            font-size: 30px;
+            color: white;
+        }
+        .s{
+            width: 250px;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="media">
+        <div class="font">
+            <img src="img/shao.png">
+            <p  class="n">#新玩意</p>
+            <img  src="img/sou.png" class="s">
+        </div>
+    </div>
+</div>
+<div class="media">
+    <div class="media-body">
+        <div class="container">
+            <div class="alert alert-success" th:each="shao:${shaoList}" style="background-color: white;margin-left: 50px">
+                <div class="top">
+                    <div class="media">
+                        <div class="media-left">
+                            <img th:src="@{${shao.avator}}" style="height: 50px;width:50px;border-radius: 70%;">
+                        </div>
+                        <div class="media-body">
+                            <div>
+                                <p th:text="${shao.writer}"></p>
+                            </div>
+                            <div>
+                                <p th:text="${shao.time}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media" >
+                    <div class="media-left">
+                        <div class="title">
+                            <p th:text="${shao.title}"></p>
+                        </div>
+                        <div class="content">
+                            <p th:text="${shao.content}"></p>
+                        </div>
+                    </div>
+                    <div class="media-right">
+                        <div>
+                            <div class="pic">
+                                <img th:src="@{${shao.pic}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-body">
+        <div class="b" style="width: 300px">
+            <div class="alert alert-success" th:each="shao:${shaoList}" style="background-color: white">
+                <div class="mpic">
+                    <img th:src="@{${shao.mpic}}">
+                </div>
+                <div>
+                    <div class="title">
+                        <p th:text="${shao.mtitle}"}></p>
+                    </div>
+                    <div class="content">
+                        <p th:text="${shao.mcontent}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

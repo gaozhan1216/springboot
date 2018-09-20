@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卡片页面</title>
+    <style>
+        .avartar{
+            width:48px;
+            height:40px;
+        }
+        .bar{
+            background-color:darkcyan;
+        }
+    </style>
+</head>
+<body>
+<!--<nav class="navbar navbar=default bar">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-left">-->
+            <!--<img th:src="@{'img/'+${user.avatar}"class="img-circle-avatar">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+<div class="container">
+    <div class="col-md-3"th:each="card:${cardList}">
+        <div class="thumbnail">
+            <img th:src="@{${card.imgLink}}">
+            <div class="caption">
+                <h3 th:text="${card.title}" class="text-center"></h3>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
