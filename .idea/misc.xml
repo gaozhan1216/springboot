@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/spring-boot-websocket/pom.xml" />
         <option value="$PROJECT_DIR$/quartzdeom/pom.xml" />
         <option value="$PROJECT_DIR$/websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-quartz/pom.xml" />
       </list>
     </option>
   </component>

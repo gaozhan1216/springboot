@@ -9,6 +9,7 @@
         <module name="quartzdemo" />
         <module name="quartzdeom" />
         <module name="spring-boot-jpa" />
+        <module name="spring-quartz" />
         <module name="websocket" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="quickstart" target="1.8" />
       <module name="spring-boot-jpa" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
+      <module name="spring-quartz" target="1.8" />
       <module name="websocket" target="1.8" />
     </bytecodeTargetLevel>
   </component>
